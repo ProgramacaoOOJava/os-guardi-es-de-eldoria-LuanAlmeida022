@@ -1,125 +1,115 @@
-# Desafio - Os Guardiões de Eldoria: A Saga Continua
+# Desafio - Os Guardiões de Eldoria: Restaurando a Ordem 🗡️🛡️
 
-Bem-vindo ao desafio "Os Guardiões de Eldoria"! Neste sistema, você criará e gerenciará personagens do reino encantado, aplicando conceitos avançados da Programação Orientada a Objetos em Java. Cada personagem possui atributos únicos e habilidades especiais que os distinguem em batalhas épicas.
+Olá! Boas-vindas ao desafio de programação do **Tema 1: Introdução à Programação OO em Java**! 
 
-A empresa TechNova contratou você para desenvolver um sistema completo de gerenciamento de heróis, que demonstra herança, encapsulamento, polimorfismo e sobrescrita de métodos.
+A TechNova, uma renomada empresa de tecnologia, contratou você como programador-líder para restaurar a ordem e a lógica no desenvolvimento do jogo de RPG *Os Guardiões de Eldoria*. Sua missão é aplicar os princípios da Programação Orientada a Objetos (POO) com Java para otimizar as funcionalidades do jogo, organizando dados que foram lançados ao caos.
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior. Você deve escolher qual desafio quer realizar.
+O desafio está dividido em três níveis de dificuldade: **Novato, Aventureiro e Mestre**. Cada etapa reflete habilidades reais exigidas pelo mercado, desde o design básico de classes até o gerenciamento de grandes volumes de objetos. Você deve escolher qual nível quer realizar de acordo com o seu momento de aprendizado.
 
-🚨 **Atenção**: O nível Novato do desafio é focado na criação básica de classes com herança e encapsulamento, utilizando construtores para inicializar os dados e métodos para exibi-los.
+🚨 **Atenção**: É fundamental organizar seu código, utilizar boas práticas de nomenclatura (PascalCase para classes, camelCase para atributos/métodos), fazer a correta identação e comentar trechos relevantes.
 
-## 🎮 Nível Novato: Hierarquia Básica de Classes
+---
 
-No nível Novato, você iniciará criando o sistema básico de personagens de Eldoria com herança e encapsulamento. Os personagens serão organizados em uma hierarquia onde a classe Personagem serve como base para especializações como Mago e Guerreiro.
+## 🟢 Nível Novato: Ambiente, Classes e Objetos
 
-🚩 **Objetivo**: Criar um programa em Java que implementa uma hierarquia de classes com os seguintes atributos:
+No nível Novato, o coração da orientação a objetos começa a bater. Você dará o primeiro passo criando a estrutura fundamental dos personagens do jogo, atribuindo características e comportamentos a eles.
 
-- Nome (String)
-- Classe (String) 
-- Nível (int)
-- Pontos de Vida (int)
-- Poder Base (double)
+🚩 **Objetivo**: Criar um programa em Java que defina uma classe base e instancie objetos na memória.
 
 ### ⚙️ Funcionalidades do Sistema:
-
-- Classe Personagem como superclasse com atributos encapsulados (private)
-- Subclasses Mago e Guerreiro que herdam de Personagem
-- Construtores que inicializam todos os atributos
-- Getters e setters para acesso controlado aos atributos
-- Método usarHabilidade() implementado em cada subclasse
-
-### 📥 Entrada e 📤 Saída de Dados:
-
-- Os personagens são criados programaticamente no método main
-- O programa exibe os dados cadastrados usando toString(), com cada atributo em uma nova linha
-
-**Simplificações para o Nível Novato:**
-- Cadastre apenas dois personagens (um Mago e um Guerreiro)
-- Concentre-se na herança, encapsulamento e criação básica das classes
-- Não implemente comparações ou validações complexas
-
-## 🛡️ Nível Aventureiro: Sobrescrita de Métodos e Validações
-
-No nível Aventureiro, você expandirá o sistema para incluir sobrescrita dos métodos da classe Object e validações nos setters.
-
-### 🆕 Diferença em relação ao Nível Novato:
-
-**Sobrescrita de Métodos:**
-- toString(): Formatação personalizada dos dados do personagem
-- equals(): Comparação baseada em nome e classe
-- hashCode(): Consistente com equals() usando Objects.hash()
-
-**Validações:**
-- Nível e pontos de vida não podem ser negativos
-- Setters com validação automática
-
-### ⚙️ Funcionalidades do Sistema:
-
-- O sistema validará automaticamente os dados inseridos nos setters
-- Os métodos sobrescritos permitirão comparação e exibição adequadas
-- Tratamento de exceções para valores inválidos
+- Criação da classe `Personagem`.
+- Definição dos seguintes atributos:
+  - `nome` (String)
+  - `classe` (String - ex: Mago, Guerreiro, Arqueiro)
+  - `nivel` (int)
+  - `pontosDeVida` (int)
+  - `poderBase` (double)
+- Criação do método `exibirStatus()`, responsável por imprimir no console todas as informações do personagem de forma legível.
 
 ### 📥 Entrada e 📤 Saída de Dados:
+- No método `main`, instancie **dois personagens** (utilizando a palavra-chave `new`).
+- Atribua valores diretamente aos atributos.
+- Chame o método `exibirStatus()` para cada um.
 
-- Mesma entrada do nível Novato
-- A saída utilizará os métodos sobrescritos para formatação
-- Demonstração de comparação entre personagens usando equals()
+**Restrições do Nível Novato:**
+- Não utilize estruturas de decisão (`if`, `switch`) ou repetição (`for`, `while`).
+- O código deve compilar e executar sem erros via terminal ou IDE.
 
-**Simplificações para o Nível Aventureiro:**
-- Continue cadastrando apenas dois personagens
-- Foque na sobrescrita correta dos métodos e validações básicas
-
-## 🏆 Nível Mestre: Polimorfismo e Verificação de Tipos
-
-No nível Mestre, você implementará polimorfismo dinâmico com ArrayList e verificação de tipos com instanceof.
-
-### 🆕 Diferença em relação ao Nível Aventureiro:
-
-**Polimorfismo Dinâmico:**
-- ArrayList<Personagem> armazenando diferentes tipos de heróis
-- Vinculação dinâmica do método usarHabilidade()
-
-**Verificação de Tipos:**
-- Uso do operador instanceof para identificar tipos em tempo de execução
-- Mensagens personalizadas para cada tipo de personagem
-
-**Sistema Completo:**
-- Cadastro de múltiplos personagens (pelo menos 2 Magos e 2 Guerreiros)
-- Comparações entre personagens diferentes
-- Demonstração de todos os conceitos de POO
-
-### ⚙️ Funcionalidades do Sistema:
-
-- Lista polimórfica que armazena diferentes tipos de personagens
-- Iteração sobre a lista demonstrando polimorfismo dinâmico
-- Verificação de tipos e exibição de mensagens específicas
-- Comparação completa entre personagens usando equals()
-
-### 📥 Entrada e 📤 Saída de Dados:
-
-- Mesma entrada dos níveis anteriores, mas com múltiplos personagens
-- A saída mostrará o resultado completo com polimorfismo, comparações e verificações de tipo
-
-**Exemplo de saída:**
-```
-=== BEM-VINDOS AO REINO DE ELDORIA ===
---- Herói 1 ---
-Nome: Eldoran
-Classe: Mago
-Nível: 7
-Pontos de Vida: 60
-Poder Base: 18.0
-Habilidade: Eldoran conjura um feitiço de proteção!
-O personagem Eldoran é um Mago de nível 7.
-
-Comparação: Eldoran e Arthemis são diferentes.
+**Exemplo de saída esperada:**
+```text
+Nome: Arthemis
+Classe: Arqueira
+Nível: 5
+Pontos de Vida: 80
+Poder Base: 12.5
 ```
 
-**Observação**: Preste atenção à implementação correta do polimorfismo e à consistência entre equals() e hashCode()!
+---
 
-## 🏁 Conclusão
+## 🟡 Nível Aventureiro: Herança, Classes Abstratas e Polimorfismo
 
-Ao concluir qualquer um dos níveis, você terá dado um passo importante no domínio da Programação Orientada a Objetos com Java. Boa sorte e divirta-se programando!
+No nível Aventureiro, a hierarquia de Eldoria ganha forma! Você vai evoluir o seu código aplicando herança para reaproveitar lógicas e polimorfismo para tratar diferentes heróis de forma genérica.
 
-**Equipe de Ensino - TechNova**
+### 🆕 Evolução em relação ao Nível Novato:
+Você transformará a classe `Personagem` em uma **superclasse abstrata** e criará classes especializadas que herdam dela.
 
+### ⚙️ Funcionalidades do Sistema:
+- **Classe Abstrata**: Transforme `Personagem` em uma classe `abstract`.
+- **Construtores**: Utilize construtores adequados, usando `super()` nas subclasses para inicializar os dados da superclasse.
+- **Herança**: Crie pelo menos duas subclasses (ex: `Guerreiro` e `Mago`) com atributos e comportamentos próprios.
+- **Métodos Abstratos e Sobrescrita**:
+  - Adicione o método abstrato `usarHabilidadeEspecial()` em `Personagem`.
+  - Sobrescreva (`@Override`) este método em cada subclasse com uma mensagem personalizada. (Ex: *"Guerreiro Arthus ataca com Espada Flamejante!"*).
+- **Reuso**: Crie um método `exibirStatus()` na classe mãe para reaproveitar comportamento comum.
+
+### 📥 Entrada e 📤 Saída de Dados:
+- Instancie diferentes personagens e armazene-os em uma estrutura polimórfica (um `Array` clássico `Personagem[]` ou `ArrayList`).
+- Faça uma iteração (`for` ou `foreach`) sobre essa estrutura e chame o método `usarHabilidadeEspecial()` de forma genérica, demonstrando o polimorfismo em tempo de execução (Dynamic Dispatch).
+
+---
+
+## 🔴 Nível Mestre: Associações, Coleções e Batalhas Épicas
+
+Chegou a hora de provar seu domínio! No nível Mestre, você agrupará objetos utilizando a *Java Collections Framework* e colocará seus heróis para duelar utilizando regras de negócio precisas.
+
+### 🆕 Evolução em relação ao Nível Aventureiro:
+Você vai criar relações do tipo "um-para-muitos" utilizando a classe `ArrayList` e implementar lógicas matemáticas para decidir o vencedor de um confronto.
+
+### ⚙️ Funcionalidades do Sistema:
+- **Associação**: Crie a classe `Grupo` que contém uma lista encapsulada: `private ArrayList<Personagem> membros;`
+- **Métodos do Grupo**:
+  - `adicionarPersonagem(Personagem p)`: Insere um herói na coleção.
+  - `listarPersonagens()`: Exibe todos os membros do grupo.
+  - `batalhar(Personagem a, Personagem b)`: Realiza a batalha e exibe o vencedor.
+- **Lógica de Combate**: 
+  - Aplique a fórmula: `int poderTotal = personagem.getNivel() * personagem.getPoderBase();`
+  - O personagem com maior `poderTotal` vence.
+
+### 📥 Entrada e 📤 Saída de Dados:
+- Crie múltiplos personagens e adicione-os a dois grupos distintos.
+- Realize batalhas e exiba o resultado.
+
+**Exemplo de saída de batalha:**
+```text
+Mago Elenara venceu! Poder total: 300
+```
+
+### 🌟 Desafios Extras (Opcional - Para ir além!):
+1. Crie uma classe `Arena` com o método `batalharGrupos(Grupo g1, Grupo g2)` que realiza batalhas em pares entre os membros dos dois grupos.
+2. Implemente a interface `Comparable` na classe `Personagem` para permitir a ordenação (ex: `Collections.sort()`) dos personagens pelo seu nível antes das batalhas.
+
+---
+
+## 🏁 Conclusão e Entrega
+
+A arquitetura de sistemas orientados a objetos reflete a complexidade do mundo real. Ao concluir este desafio, você não escreveu apenas código: você modelou um ecossistema digital reutilizável, coeso e escalável.
+
+* Para realizar a entrega, faça o **commit** do seu código no repositório do GitHub Classroom fornecido.
+* Lembre-se de organizar cada classe em um arquivo separado (`.java`).
+* Cadastre o link do seu repositório na Guia de Trabalhos da SAVA.
+
+A jornada começa agora, Guardião. **Vamos lá!** 🚀☕
+
+---
+*Professor e Curadoria de TI - Curso de Programação Orientada a Objetos em Java.*
+```
